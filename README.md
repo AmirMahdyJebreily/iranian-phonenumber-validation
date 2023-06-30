@@ -25,7 +25,10 @@
 | +98912 003 4965 | ✅ |
 | +98912-003-4965 | ✅ |
 
-تمام پیش شماره های قابل تشخیص رو میتونید [اینجا](https://github.com/AmirMahdyJebreily/iranian-phonenumber-validation/blob/main/ValidPreNumbers.md) ببینید
+تمام پیش شماره های قابل تشخیص رو میتونید [اینجا](https://github.com/AmirMahdyJebreily/iranian-phonenumber-validation/blob/main/ValidPreNumbers.md) ببینید.
+
+
+> توجه: درصورتی که میخواهید ریجکس خود را شخصی سازی کنید، [این صفحه](https://amirmahdyjebreily.github.io/iranian-phonenumber-validation/) را ببینید
 
 ## اوپراتور های کشوری
 
@@ -83,4 +86,6 @@
 /((09)|(\+989))((94)).?\d{3}.?\d{4}/g
 ```  
 
-
+---
+###منابع  
+* ویکی پدیا - [مقاله شماره تلفن های ایران](https://fa.wikipedia.org/wiki/%D8%B4%D9%85%D8%A7%D8%B1%D9%87%E2%80%8C%D9%87%D8%A7%DB%8C_%D8%AA%D9%84%D9%81%D9%86_%D8%AF%D8%B1_%D8%A7%DB%8C%D8%B1%D8%A7%D9%86)
