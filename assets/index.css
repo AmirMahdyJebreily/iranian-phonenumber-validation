@@ -64,6 +64,7 @@ body {
     background-color: var(--secondry);
     color: var(--text);
     direction: rtl;
+    position: relative;
 }
 
 hr {
@@ -159,9 +160,38 @@ code {
 }
 
 .copy:hover {
-    color: #06b6d4;
+    color: #c084fc;
 }
 
 .anim-shake {
     animation: shake 500ms;
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 4rem;
+    gap: 0.5rem;
+}
+
+.info-logo{
+    width: 24px;
+    height: 24px;
+}
+
+.info-logo:hover{
+    animation: shake 500ms;
+}
+
+.info-text{
+    position: absolute;
+    bottom: 1.2rem;
+}
+
+
+.link{
+    color: #c084fc;
+    text-decoration: none;
 }
