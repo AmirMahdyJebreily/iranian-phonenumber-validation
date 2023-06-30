@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&family=Vazirmatn:wght@400;900&display=swap');
+
+:root {
+    --primary: #4F4557;
+    --secondry: #393646;
+    --night: #6D5D6E;
+    --light: #F4EEE0;
+    --text: #E5E7eb;
+    --textcode: #E5E7eb90;
+    --textbadg: #E5E7eb75;
+    --badg: #00000050;
+    --badgbor: #00000055;
+    --code: #0007;
+}
+
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--secondry);
+    color: var(--text);
+    direction: rtl;
+}
+
+hr {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    opacity: 0.10;
+}
+
+main {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.badgets {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    width: 100%;
+    align-items: stretch;
+    color: var(--textbadg);
+}
+
+.badget {
+    user-select: none;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 10px;
+    border: 2px solid var(--badgbor);
+    background-color: var(--badg);
+    transition: all 0.2s ease-in-out 0.001s;
+}
+
+.badget:hover {
+    transform: scale(1.05);
+}
+
+.badget.select {
+    border: 2px solid var(--light);
+    color: var(--light);
+}
+
+.code {
+    background: var(--code);
+    color: var(--textcode);
+    font-size: 22px;
+    margin-top: 3rem;
+    border-radius: 15px;
+    direction: ltr;
+    overflow-x: auto;
+    overflow-y: hidden;
+    box-sizing: border-box;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    height: 200px;
+}
+
+code{
+    font-family: 'Ubuntu Mono', monospace;
+    word-wrap: normal;
+    width: 1000px;
+    padding: 1rem 2rem;
+}
+
+.copy{
+    background-color: #0005;
+    border: none;
+    height: 100%;
+    width: 70px;
+    color: var(--light);
+}
