@@ -13,6 +13,46 @@
     --code: #0007;
 }
 
+@keyframes shake {
+    0% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(30deg);
+    }
+
+    75% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+/* width */
+.scroll-bar::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+.scroll-bar::-webkit-scrollbar-track {
+    background: #ffffff05;
+}
+
+/* Handle */
+.scroll-bar::-webkit-scrollbar-thumb {
+    border-radius: 1000px;
+    background: #7785;
+    transition: all 0.2s;
+}
+
+/* Handle on hover */
+.scroll-bar::-webkit-scrollbar-thumb:hover {
+    background: #5555;
+}
+
 body {
     font-family: 'Vazirmatn', sans-serif;
     display: flex;
@@ -57,7 +97,23 @@ main {
     border-radius: 10px;
     border: 2px solid var(--badgbor);
     background-color: var(--badg);
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.button {
+    user-select: none;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid var(--badgbor);
+    background-color: var(--badg);
     transition: all 0.2s ease-in-out 0.001s;
+}
+
+.button:hover {
+    color: var(--light);
 }
 
 .badget:hover {
@@ -76,27 +132,36 @@ main {
     margin-top: 3rem;
     border-radius: 15px;
     direction: ltr;
-    overflow-x: auto;
-    overflow-y: hidden;
     box-sizing: border-box;
     width: 800px;
     display: flex;
+    overflow: hidden;
     justify-content: center;
     align-items: stretch;
-    height: 200px;
+    height: 100px;
 }
 
-code{
+code {
     font-family: 'Ubuntu Mono', monospace;
     word-wrap: normal;
-    width: 1000px;
+    width: 100%;
     padding: 1rem 2rem;
+    overflow: auto;
 }
 
-.copy{
+.copy {
     background-color: #0005;
     border: none;
     height: 100%;
     width: 70px;
     color: var(--light);
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.copy:hover {
+    color: #06b6d4;
+}
+
+.anim-shake {
+    animation: shake 500ms;
 }
