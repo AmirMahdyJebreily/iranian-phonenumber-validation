@@ -18,7 +18,7 @@ function setCode() {
     operators.forEach((operator) => {
         prenumbers += regexes[operator] + "|";
     })
-    code = `/((09)|(\+989))(${prenumbers.substring(0, prenumbers.length - 1)}).?\d{3}.?\d{4}/g`;
+    code = `/((09)|(\\+?989))(${prenumbers.substring(0, prenumbers.length - 1)}).?\d{3}.?\d{4}/g`;
 }
 
 function select(value) {
