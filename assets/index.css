@@ -19,11 +19,11 @@
     }
 
     25% {
-        transform: rotate(30deg);
+        transform: rotate(10deg);
     }
 
     75% {
-        transform: rotate(-31deg);
+        transform: rotate(-10deg);
     }
 
     100% {
@@ -140,6 +140,7 @@ main {
     justify-content: center;
     align-items: stretch;
     height: 100px;
+    padding: 0.25rem;
 }
 
 code {
@@ -167,7 +168,7 @@ code {
     animation: shake 500ms;
 }
 
-.info{
+.info {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -176,22 +177,32 @@ code {
     gap: 0.5rem;
 }
 
-.info-logo{
+.info-logo {
     width: 24px;
     height: 24px;
 }
 
-.info-logo:hover{
+.info-logo:hover {
     animation: shake 500ms;
 }
 
-.info-text{
+.github-logo {
+    width: 48px;
+    height: 48px;
+}
+
+.github-logo:hover {
+    animation: shake 500ms;
+
+}
+
+.info-text {
     position: absolute;
     bottom: 1.2rem;
 }
 
 
-.link{
+.link {
     color: #c084fc;
     text-decoration: none;
 }
