@@ -25,9 +25,7 @@
 | +98912 003 4965 | ✅ |
 | +98912-003-4965 | ✅ |
 
-
-## پیش شماره های قابل تشخیص
-خیلی زیاد بودن، گذاشتمشون اینجا
+تمام پیش شماره های قابل تشخیص رو میتونید [اینجا](https://github.com/AmirMahdyJebreily/iranian-phonenumber-validation/blob/main/ValidPreNumbers.md) ببینید
 
 ## اوپراتور های کشوری
 
