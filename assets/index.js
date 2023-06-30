@@ -13,6 +13,8 @@ let regexes = {
 const allOprators = "/((09)|(\\+?989))((14)|(13)|(12)|(19)|(18)|(17)|(15)|(16)|(11)|(10)|(90)|(91)|(92)|(93)|(94)|(95)|(96)|(32)|(30)|(33)|(35)|(36)|(37)|(38)|(39)|(00)|(01)|(02)|(03)|(04)|(05)|(41)|(20)|(21)|(22)|(23)|(31)|(34)|(9910)|(9911)|(9913)|(9914)|(9999)|(999)|(990)|(9810)|(9811)|(9812)|(9813)|(9814)|(9815)|(9816)|(9817)|(998)|(94)).?\\d{3}.?\\d{4}/g";
 let code = "";
 
+document.getElementById("code").innerHTML = allOprators;
+
 function setCode() {
     let prenumbers = "";
     operators.forEach((operator) => {
@@ -22,6 +24,7 @@ function setCode() {
 }
 
 function select(value) {
+    code = "";
     if (operators.includes(value)) {
         const index = operators.indexOf(value);
         if (index > -1) {
