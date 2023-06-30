@@ -28,7 +28,7 @@
 تمام پیش شماره های قابل تشخیص رو میتونید [اینجا](https://github.com/AmirMahdyJebreily/iranian-phonenumber-validation/blob/main/ValidPreNumbers.md) ببینید.
 
 
-> "توجه: درصورتی که میخواهید ریجکس خود را شخصی سازی کنید، [این صفحه](https://amirmahdyjebreily.github.io/iranian-phonenumber-validation/) را ببینید
+> توجه: درصورتی که میخواهید ریجکس خود را شخصی سازی کنید، [این صفحه](https://amirmahdyjebreily.github.io/iranian-phonenumber-validation/) را ببینید
 
 ## اوپراتور های کشوری
 
