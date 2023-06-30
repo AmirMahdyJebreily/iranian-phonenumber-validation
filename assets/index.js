@@ -53,7 +53,7 @@ function selectAll() {
         elem.classList.remove("select");
     });
 
-
+    operators = [];
     code = allOprators;
     document.getElementById("code").innerHTML = code;
 }
