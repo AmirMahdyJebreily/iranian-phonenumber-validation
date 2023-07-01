@@ -172,8 +172,7 @@ code {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    bottom: 4rem;
+    margin-top: 5px;
     gap: 0.5rem;
 }
 
@@ -197,12 +196,16 @@ code {
 }
 
 .info-text {
-    position: absolute;
-    bottom: 1.2rem;
+    margin-top: 1px;
 }
 
 
 .link {
     color: #c084fc;
     text-decoration: none;
+    transition: all 0.1s ease-in;
+}
+
+.link:hover {
+    color: #c084fc50;
 }
