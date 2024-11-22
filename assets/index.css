@@ -64,7 +64,7 @@
   }
 
   #phonenumber{
-    @apply py-1 px-2 bg-transparent focus:outline-none w-36 text-gray-950
+    @apply py-1 px-2 bg-transparent focus:outline-none w-40 text-gray-950
   }
   
   .input-container{
