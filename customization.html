@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صحت سنجی شماره تلفن های ایرانی | کدآقا</title>
+    <link rel="stylesheet" href="assets/out-customization.css">
+    <meta name="description"
+        content="چیزی که اینجا میبینید اینه که یه بیکاری مثل من نشسته برای هر اوپراتور یک ریجکس خاص نوشته تا بتونید تمام شماره تلفن های ایرانی رو با اوپراتورشون شناسیی کنید. این بدرد وقتی میخوره که میخواید OTP بفرستید.  توی این صفحه شما میتونید انتخاب کنید دقیق کدوم اوپراتور ها رو میخواید تا توی رجکستون باشه. و اگر هیچ اوپراتوری رو انتخاب نکنید، رجکس همه اوپراتور ها رو میبینید 💪">
+    <meta property="og:description"
+        content="چیزی که اینجا میبینید اینه که یه بیکاری مثل من نشسته برای هر اوپراتور یک ریجکس خاص نوشته تا بتونید تمام شماره تلفن های ایرانی رو با اوپراتورشون شناسیی کنید. این بدرد وقتی میخوره که میخواید OTP بفرستید.  توی این صفحه شما میتونید انتخاب کنید دقیق کدوم اوپراتور ها رو میخواید تا توی رجکستون باشه. و اگر هیچ اوپراتوری رو انتخاب نکنید، رجکس همه اوپراتور ها رو میبینید 💪">
+</head>
+
+<body>
+    <main>
+        <a target="_blank" href="https://github.com/AmirMahdyJebreily/iranian-phonenumber-validation"><img
+                src="assets/github-mark-white.png" class="github-logo" /></a>
+        <h1>شخصی ساز رجکس های تشخیص شماره تلفن ایرانی
+        </h1>
+        <hr />
+        <section class="badgets">
+            <span onclick="selectAll()" id="all" class="button">شماره های کل کشور</span>
+            <span onclick="select('irmci')" id="irmci" class="badget">شماره های همراه اول</span>
+            <span onclick="select('mtn')" id="mtn" class="badget">شماره های ایرانسل</span>
+            <span onclick="select('rightel')" id="rightel" class="badget">شماره های رایتل</span>
+            <span onclick="select('talia')" id="talia" class="badget">شماره های تالیا</span>
+            <span onclick="select('telekish')" id="telekish" class="badget">شماره های تِلِه کیش</span>
+            <span onclick="select('aptel')" id="aptel" class="badget">شماره های آپتل (Aptel)</span>
+            <span onclick="select('samantel')" id="samantel" class="badget">شماره های سامانتل (SamanTel)</span>
+            <span onclick="select('shatel')" id="shatel" class="badget">شماره های شاتل موبایل</span>
+        </section>
+        <div class="code">
+            <code id="code" class="scroll-bar"></code>
+            <button onclick="copyText()" class="copy">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" id="copy" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" style="width: 24px; height: 24px;">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184" />
+                </svg>
+            </button>
+        </div>
+        <p>جهت اطلاع از پیش شماره های هر اوپراتور به <a target="_blank"
+                href="https://github.com/AmirMahdyJebreily/iranian-phonenumber-validation/blob/main/ValidPreNumbers.md"
+                class="link">این صفحه</a> مراجعه کنید</p>
+        <div class="info">
+            <a target="_blank" href="https://t.me/am_jcs"><img src="assets/telegram_app_24px.png"
+                    class="info-logo" /></a>
+            <a target="_blank" href="https://twitter.com/amirmahdyjdx"><img src="assets/twitter_24px.png"
+                    class="info-logo" /></a>
+        </div>
+        <p class="info-text">طراحی با ❤️ از <a target="_blank" class="link"
+                href="https://github.com/AmirMahdyJebreily/">کدآقا</a></p>
+    </main>
+
+    <script>
+        let operators = [];
+        let regexes = {
+            "irmci": "(14)|(13)|(12)|(19)|(18)|(17)|(15)|(16)|(11)|(10)|(90)|(91)|(92)|(93)|(94)|(95)|(96)",
+            "mtn": "(30)|(33)|(35)|(36)|(37)|(38)|(39)|(00)|(01)|(02)|(03)|(04)|(05)|(41)",
+            "rightel": "(20)|(21)|(22)|(23)",
+            "talia": "(32)",
+            "telekish": "(34)",
+            "aptel": "(9910)|(9911)|(9913)|(9914)",
+            "samantel": "(9999)|(999)",
+            "shatel": "(9810)|(9811)|(9812)|(9813)|(9814)|(9815)|(9816)|(9817)"
+        };
+        const allOprators = "/((0?9)|(\\+?989))((14)|(13)|(12)|(19)|(18)|(17)|(15)|(16)|(11)|(10)|(90)|(91)|(92)|(93)|(94)|(95)|(96)|(32)|(30)|(33)|(35)|(36)|(37)|(38)|(39)|(00)|(01)|(02)|(03)|(04)|(05)|(41)|(20)|(21)|(22)|(23)|(31)|(34)|(9910)|(9911)|(9913)|(9914)|(9999)|(999)|(990)|(9810)|(9811)|(9812)|(9813)|(9814)|(9815)|(9816)|(9817)|(998))\\W?\\d{3}\\W?\\d{4}/g";
+        let code = "";
+
+        document.getElementById("code").innerHTML = allOprators;
+
+        function setCode() {
+            let prenumbers = "";
+            operators.forEach((operator) => {
+                prenumbers += regexes[operator] + "|";
+            })
+            code = `/((0?9)|(\\+?989))(${prenumbers.substring(0, prenumbers.length - 1)})\\W?\d{3}\\W?\d{4}/g`;
+        }
+
+        function select(value) {
+            code = "";
+            if (operators.includes(value)) {
+                const index = operators.indexOf(value);
+                if (index > -1) {
+                    operators.splice(index, 1);
+                }
+                document.getElementById(value).classList.remove("select")
+            }
+            else {
+                operators.push(value)
+                document.getElementById(value).classList.add("select")
+            }
+            if (operators.length > 0) {
+                setCode();
+            }
+            else if (operators.length === 0) {
+                selectAll()
+            }
+
+
+            document.getElementById("code").innerHTML = code;
+        }
+
+        function selectAll() {
+            let elems = document.querySelectorAll(".select")
+            elems.forEach((elem) => {
+                elem.classList.remove("select");
+            });
+
+            operators = [];
+            code = allOprators;
+            document.getElementById("code").innerHTML = code;
+        }
+
+        function copyText() {
+
+            document.getElementById("copy").classList.remove("anim-shake");
+
+            var textToCopy = code;
+
+            var myTemporaryInputElement = document.createElement("input");
+            myTemporaryInputElement.type = "text";
+            myTemporaryInputElement.value = textToCopy;
+
+            document.body.appendChild(myTemporaryInputElement);
+
+            myTemporaryInputElement.select();
+            document.execCommand("Copy");
+
+            document.body.removeChild(myTemporaryInputElement);
+
+            document.getElementById("copy").classList.add("anim-shake");
+
+        }
+    </script>
+</body>
+
+</html>
