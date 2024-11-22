@@ -1,0 +1,38 @@
+{
+    "noProvider":{
+        "full":"/((0?9)|(\+?989))\d{2}\W?\d{4}\W?\d{3}/g",
+        "optimal": "/((0?9)|(\+?989))\d{9}/g"
+    },
+    "mtnIrancel":{
+        "full": "",
+        "optimal":""
+    },
+    "irMci":{
+        "full": "",
+        "optimal":""
+    },
+    "rightel":{
+        "full": "",
+        "optimal":""
+    },
+    "teleKish":{
+        "full": "",
+        "optimal":""
+    },
+    "talia":{
+        "full": "",
+        "optimal":""
+    },
+    "aptel":{
+        "full": "",
+        "optimal":""
+    },
+    "samanTel":{
+        "full": "",
+        "optimal":""
+    },
+    "shatelMobile":{
+        "full": "",
+        "optimal":""
+    }
+}
