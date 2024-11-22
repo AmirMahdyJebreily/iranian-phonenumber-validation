@@ -4,5 +4,8 @@
   },
   "scripts": {
     "tailwindwatch": "npx tailwindcss -i ./assets/index.css -o ./assets/out.css --watch"
+  },
+  "dependencies": {
+    "text-marshal": "^0.0.2"
   }
 }

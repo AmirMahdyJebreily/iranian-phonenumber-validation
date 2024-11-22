@@ -1,3 +1,73 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  [contenteditable="true"]:focus {
+    outline: none;
+  }
+  @font-face {
+    font-family: arad;
+    src: url("./fonts/Arad-VF.woff2");
+  }
+  body {
+    @apply w-screen bg-gray-300 text-gray-800 font-['arad'];
+  }
+
+  header,main {
+    @apply flex justify-center items-center flex-col w-full;
+  }
+
+  nav {
+    @apply bg-gray-100 w-full text-gray-700 text-center fixed top-0 py-3 px-3 font-bold text-lg;
+  }
+
+  code{
+    @apply text-teal-800
+  }
+
+  #hero {
+    @apply w-full py-24 flex justify-center items-start bg-cover min-h-screen;
+    background-color: rgba(123, 223, 242, 1);
+    background-image: radial-gradient(
+        at 46% 33%,
+        rgba(178, 247, 239, 1) 0%,
+        transparent 50%
+      ),
+      radial-gradient(at 42% 83%, rgba(239, 247, 246, 1) 0%, transparent 35%),
+      radial-gradient(at 33% 31%, rgba(239, 247, 246, 1) 0%, transparent 50%),
+      radial-gradient(at 10% 64%, rgba(247, 214, 224, 1) 0%, transparent 71%),
+      radial-gradient(at 87% 72%, rgba(242, 181, 212, 1) 0%, transparent 85%),
+      radial-gradient(at 85% 12%, rgba(239, 247, 246, 1) 0%, transparent 50%);
+  }
+}
+
+@layer components {
+  .benef-card {
+    @apply bg-white/50 py-2 px-4 rounded-xl text-lg min-w-60 flex-1 transition duration-300 hover:ring-2 ring-teal-700/70 hover:animate-wiggle cursor-default;
+  }
+
+  .benef-card-header {
+    @apply flex items-center justify-start gap-1 pb-1 border-b-2 border-gray-200/40 mb-1;
+  }
+
+  .benef-card-header > .card-icon {
+    @apply size-7 text-teal-800;
+  }
+
+  .benef-card-header > p {
+    @apply font-medium;
+  }
+
+  .benef-card > p {
+    @apply font-light text-sm;
+  }
+
+  #phonenumber{
+    @apply py-1 px-2 bg-transparent focus:outline-none w-36 text-gray-950
+  }
+  
+  .input-container{
+    @apply bg-gradient-to-tr sm:text-xl text-lg from-white/70 to-white/20 border-2 border-transparent focus-within:border-teal-700 focus-within:text-teal-900 rounded-xl flex items-center justify-center flex-col sm:px-6 px-3 py-2 transition-colors duration-700
+  }
+}

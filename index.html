@@ -4,63 +4,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="./assets/componentsMod.js"></script>
     <title>صحت سنجی شماره تلفن های ایرانی | کدآقا</title>
-    <link rel="stylesheet" href="assets/index.css">
+    <link rel="stylesheet" href="assets/out.css">
     <meta name="description"
-        content="چیزی که اینجا میبینید اینه که یه بیکاری مثل من نشسته برای هر اوپراتور یک ریجکس خاص نوشته تا بتونید تمام شماره تلفن های ایرانی رو با اوپراتورشون شناسیی کنید. این بدرد وقتی میخوره که میخواید OTP بفرستید.  توی این صفحه شما میتونید انتخاب کنید دقیق کدوم اوپراتور ها رو میخواید تا توی رجکستون باشه. و اگر هیچ اوپراتوری رو انتخاب نکنید، رجکس همه اوپراتور ها رو میبینید 💪">
+        content="مجموعه رجکس های بهینه برای توسعه دهندگان بک‌اند و فرانت‌اند برای تشخیص صحت شماره تلفن ایرانی بر اساس اوپراتور.">
     <meta property="og:description"
-        content="چیزی که اینجا میبینید اینه که یه بیکاری مثل من نشسته برای هر اوپراتور یک ریجکس خاص نوشته تا بتونید تمام شماره تلفن های ایرانی رو با اوپراتورشون شناسیی کنید. این بدرد وقتی میخوره که میخواید OTP بفرستید.  توی این صفحه شما میتونید انتخاب کنید دقیق کدوم اوپراتور ها رو میخواید تا توی رجکستون باشه. و اگر هیچ اوپراتوری رو انتخاب نکنید، رجکس همه اوپراتور ها رو میبینید 💪">
+        content="مجموعه رجکس های بهینه برای توسعه دهندگان بک‌اند و فرانت‌اند برای تشخیص صحت شماره تلفن ایرانی بر اساس اوپراتور">
 </head>
 
-<body>
-    <main>
-        <a target="_blank" href="https://github.com/AmirMahdyJebreily/iranian-phonenumber-validation"><img
-                src="assets/github-mark-white.png" class="github-logo" /></a>
-        <h1>صحت سنجی شماره تلفن های ایرانی با رجکس
-        </h1>
-        <h2 style="margin: 8px 1px;">چیزی که همیشه میخواستیم ;)</h2>
-        <p>همیشه صحت سنجی شماره تلفن ها برای ما برنامه نویسا یکم داستان داشته و خب چون بیشتر ما اصلا خودمون رو درگیر این
-            چیزا نمی کنیم و به این فکر می کنیم که خب فوقش طرف شمارشو اشتباه میزنه دیگه و OTP سایت براش نمیره !!! و همیشه
-            اینجوری از زیر کار در رفتیم.این رجکس ها فقط فرمت شماره تلفن رو پیدا می کنن نه اینکه آیا این شماره واقعا وجود داره یا نه
-            !<br /> توی این صفحه شما میتونید انتخاب کنید دقیق کدوم اوپراتور ها رو میخواید تا توی رجکستون باشه. و اگر هیچ
-            اوپراتوری رو انتخاب نکنید، رجکس همه اوپراتور ها رو میبینید 💪
-        </p>
-        <hr />
-        <section class="badgets">
-            <span onclick="selectAll()" id="all" class="button">شماره های کل کشور</span>
-            <span onclick="select('irmci')" id="irmci" class="badget">شماره های همراه اول</span>
-            <span onclick="select('mtn')" id="mtn" class="badget">شماره های ایرانسل</span>
-            <span onclick="select('rightel')" id="rightel" class="badget">شماره های رایتل</span>
-            <span onclick="select('talia')" id="talia" class="badget">شماره های تالیا</span>
-            <span onclick="select('telekish')" id="telekish" class="badget">شماره های تِلِه کیش</span>
-            <span onclick="select('aptel')" id="aptel" class="badget">شماره های آپتل (Aptel)</span>
-            <span onclick="select('samantel')" id="samantel" class="badget">شماره های سامانتل (SamanTel)</span>
-            <span onclick="select('shatel')" id="shatel" class="badget">شماره های شاتل موبایل</span>
-        </section>
-        <div class="code">
-            <code id="code" class="scroll-bar"></code>
-            <button onclick="copyText()" class="copy">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" id="copy" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" style="width: 24px; height: 24px;">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184" />
-                </svg>
-            </button>
-        </div>
-        <p>جهت اطلاع از پیش شماره های هر اوپراتور به <a target="_blank"
-                href="https://github.com/AmirMahdyJebreily/iranian-phonenumber-validation/blob/main/ValidPreNumbers.md"
-                class="link">این صفحه</a> مراجعه کنید</p>
-        <div class="info">
-            <a target="_blank" href="https://t.me/am_jcs"><img src="assets/telegram_app_24px.png"
-                    class="info-logo" /></a>
-            <a target="_blank" href="https://twitter.com/amirmahdyjdx"><img src="assets/twitter_24px.png"
-                    class="info-logo" /></a>
-        </div>
-        <p class="info-text">طراحی با ❤️ از <a target="_blank" class="link"
-                href="https://github.com/AmirMahdyJebreily/">کدآقا</a></p>
-    </main>
+<body dir="rtl" class="w-screen">
+    <header>
+        <nav>
+            <h1 class="tracking-wide">رجکس تشخیـص شمـاره تلفن ایرانـی</h1>
+        </nav>
+    </header>
 
-    <script src="assets/index.js"></script>
+    <mian>
+        <section id="hero">
+            <div class="bg-gray-100/60 backdrop-blur-lg px-5 py-6 rounded-3xl lg:w-[50rem] sm:w-10/12 w-11/12">
+                <h2 class="font-bold text-4xl pb-2 text-center tracking-tighter">صحت سنجی شماره تلفن ایرانی با رجکس</h2>
+                <p class="text-center py-2 text-lg px-3">مجموعۀ <abbr title="Regular Expression">RegEx</abbr> های بهینۀ
+                    تشخیص شماره تلفن ایرانی، برای
+                    همۀ توسعه دهندگان ایرانی
+                </p>
+
+                <div class="flex items-center justify-center py-4">
+                    <label class="input-container">
+                        <div class="flex items-center justify-center">
+                            <input dir="ltr" type="text" id="phonenumber" data-pattern="9XX XXXX XXX"
+                                placeholder="9XX XXXX XXX" class="outline-0 ring-0">
+                            <span class="">98+</span>
+                        </div>
+                        <div class="text-gray-800 text-base">
+                            <p id="lable" class="">تستش کن!</p>
+                        </div>
+                    </label>
+                </div>
+
+                <h2 class="text-lg font-semibold p-2" id="why-regex">چرا رجکس؟</h2>
+                <p class="text-sm font-light p-1 pb-4">ممکن است برای شما سوال باشد چرا باید از رجکس استفاده کنیم وقتی
+                    میتوانیم از <code>if</code> ها و <code>else</code> ها استفاده کنیم و این‌همه عبارت رو یاد نگیریم؟
+                    باید به شما بگوییم که توالی های تودرتو شرطی، فقط کد های شما رو کثیف تر میکنه و بعد ها اگر ایرادی در
+                    شرط های شما باید، خطایابی از آن کد ها خیلی سخت تر صورت میگیره. اینجا چند دلیل داریم برای استفاده از
+                    رجکس ها : </p>
+                <div class="flex items-center justify-center flex-wrap gap-4">
+                    <div class="benef-card ">
+                        <div class="benef-card-header">
+                            <i-fast class="card-icon"></i-fast>
+                            <p>سریع و بهینه</p>
+                        </div>
+                        <p>سریع و بهینه در همه نرم‌افزار ها.</p>
+                    </div>
+
+                    <div class="benef-card">
+                        <div class="benef-card-header">
+                            <i-perf class="card-icon"></i-perf>
+                            <p>ساده و قابل فهم</p>
+                        </div>
+                        <p>ساختاری ساده و قابل درک برای همه.</p>
+                    </div>
+
+                    <div class="benef-card ">
+                        <div class="benef-card-header">
+                            <i-effi class="card-icon"></i-effi>
+                            <p>کاربردی</p>
+                        </div>
+                        <p>کاربرد های متنوع و عالی در همه‌جا.</p>
+                    </div>
+
+                    <div class="benef-card">
+                        <div class="benef-card-header">
+                            <i-tick class="card-icon"></i-tick>
+                            <p>روش درست</p>
+                        </div>
+                        <p>روش اصولی بررسی <code>string</code> ها.</p>
+                    </div>
+
+                    <div class="benef-card">
+                        <div class="benef-card-header">
+                            <i-code class="card-icon"></i-code>
+                            <p>کد تمیز تر</p>
+                        </div>
+                        <p>رجکس ها، تمیز تر از <code>if</code> و <code>else</code> ها</p>
+                    </div>
+
+                    <div class="benef-card">
+                        <div class="benef-card-header">
+                            <i-webs class="card-icon"></i-webs>
+                            <p>سازگار با همه</p>
+                        </div>
+                        <p>قابل استفاده در همه پلتفرم ها</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </mian>
+
+    <script type="module" src="assets/index.js"></script>
 </body>
 
 </html>
