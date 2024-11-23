@@ -96,7 +96,7 @@ function copyInnerHtml(e) {
 
 
 (function () {
-    fetch("../regexes.json")
+    fetch("https://raw.githubusercontent.com/AmirMahdyJebreily/iranian-phonenumber-validation/refs/heads/main/regexes.json")
         .then((res) => {
             if (!res.ok) {
                 throw new Error
