@@ -1204,6 +1204,10 @@ code.regex:hover {
   font-weight: 600;
 }
 
+.font-medium {
+  font-weight: 500;
+}
+
 .tracking-\[0\.2rem\] {
   letter-spacing: 0.2rem;
 }
@@ -1253,6 +1257,11 @@ code.regex:hover {
 .text-sky-500 {
   --tw-text-opacity: 1;
   color: rgb(14 165 233 / var(--tw-text-opacity, 1));
+}
+
+.text-teal-800 {
+  --tw-text-opacity: 1;
+  color: rgb(17 94 89 / var(--tw-text-opacity, 1));
 }
 
 .shadow {
