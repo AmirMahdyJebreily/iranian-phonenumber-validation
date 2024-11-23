@@ -933,6 +933,10 @@ code.regex:hover {
   top: -5rem;
 }
 
+.top-14 {
+  top: 3.5rem;
+}
+
 .-z-10 {
   z-index: -10;
 }
