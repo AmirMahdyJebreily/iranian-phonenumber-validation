@@ -13,16 +13,15 @@
         content="مجموعه رجکس های بهینه برای توسعه دهندگان بک‌اند و فرانت‌اند برای تشخیص صحت شماره تلفن ایرانی بر اساس اوپراتور">
 </head>
 
-<body dir="rtl" class="w-screen">
+<body dir="rtl" class="w-screen flex justify-center items-center flex-col">
     <header>
         <nav>
-            <h1 class="tracking-wide">رجکس تشخیـص شمـاره تلفن ایرانـی</h1>
+            <h1 class="tracking-wide lg:text-lg">رجکس تشخیـص شمـاره تلفن ایرانـی</h1>
         </nav>
-    </header>
-
-    <mian>
         <section id="hero">
-            <div class="bg-gray-100/60 backdrop-blur-lg px-5 py-6 rounded-3xl lg:w-[50rem] sm:w-10/12 w-11/12">
+            <div
+                class="bg-gray-100/60 backdrop-blur-lg flex items-center justify-start flex-col relative top-12 sm:px-5 px-2 py-6 rounded-3xl lg:w-[50rem] sm:w-10/12 w-11/12">
+                <img src="./assets/images/perspective_matte-468-128x128.png" class="size-28">
                 <h2 class="font-bold text-4xl pb-2 text-center tracking-tighter">صحت سنجی شماره تلفن ایرانی با رجکس</h2>
                 <p class="text-center py-2 text-lg px-3">مجموعۀ <abbr title="Regular Expression">RegEx</abbr> های بهینۀ
                     تشخیص شماره تلفن ایرانی، برای
@@ -31,83 +30,210 @@
 
                 <div class="flex items-center justify-center py-4">
                     <label class="input-container">
-                        <div class="flex items-center justify-center">
-                            <input dir="ltr" type="text" id="phonenumber" data-pattern="9XX XXXX XXX"
-                                placeholder="9XX XXXX XXX" class="outline-0 ring-0">
-                            <span class="">98+</span>
+                        <div class="flex items-center justify-center sm:tracking-[0.36rem] tracking-[0.2rem]">
+                            <input dir="ltr" type="text" id="phonenumber" data-pattern="09XX XXXX XXX"
+                                placeholder="09XX XXXX XXX" class="outline-0 ring-0">
                         </div>
                         <div class="text-gray-800 text-base">
-                            <p id="lable" class="">تستش کن!</p>
+                            <p id="lable" class="tracking-normal text-sm">تستش کن!</p>
                         </div>
                     </label>
+
                 </div>
 
-                <h2 class="text-lg font-semibold p-2" id="why-regex">اوپراتور ها را شخصی سازی کنید!</h2>
-                <p class="text-sm font-light p-1 pb-4">با توجه به اینکه ممکن است نخواهید تمام امکانات تشخیص اوپراتور این
-                    رجکس ها را در پروژه های خود استفاده کنید، ابزار زیر به شما کمک میکند تا رجکس های خود را شخصی سازی
-                    کنید:<a class="inline-flex justify-center items-center gap-2 text-teal-900 px-2 rounded-lg cursor-pointer hover:bg-teal-700 hover:text-white"
-                    href="./customization.html">
-                    <span>شخصی سازی رجکس ها</span>
-                    <i-edit class="size-4"></i-edit>
-                </a>
-            </p>
-
-
-                <h2 class="text-lg font-semibold p-2 pt-6" id="why-regex">چرا رجکس؟</h2>
-                <div class="flex items-center justify-center flex-wrap gap-4 pt-1">
-                    <div class="benef-card ">
-                        <div class="benef-card-header">
-                            <i-fast class="card-icon"></i-fast>
-                            <p>سریع و بهینه</p>
-                        </div>
-                        <p>سریع و بهینه در همه نرم‌افزار ها.</p>
-                    </div>
-
-                    <div class="benef-card">
-                        <div class="benef-card-header">
-                            <i-perf class="card-icon"></i-perf>
-                            <p>ساده و قابل فهم</p>
-                        </div>
-                        <p>ساختاری ساده و قابل درک برای همه.</p>
-                    </div>
-
-                    <div class="benef-card ">
-                        <div class="benef-card-header">
-                            <i-effi class="card-icon"></i-effi>
-                            <p>کاربردی</p>
-                        </div>
-                        <p>کاربرد های متنوع و عالی در همه‌جا.</p>
-                    </div>
-
-                    <div class="benef-card">
-                        <div class="benef-card-header">
-                            <i-tick class="card-icon"></i-tick>
-                            <p>روش درست</p>
-                        </div>
-                        <p>روش اصولی بررسی <code>string</code> ها.</p>
-                    </div>
-
-                    <div class="benef-card">
-                        <div class="benef-card-header">
-                            <i-code class="card-icon"></i-code>
-                            <p>کد تمیز تر</p>
-                        </div>
-                        <p>رجکس ها، تمیز تر از <code>if</code> و <code>else</code> ها</p>
-                    </div>
-
-                    <div class="benef-card">
-                        <div class="benef-card-header">
-                            <i-webs class="card-icon"></i-webs>
-                            <p>سازگار با همه</p>
-                        </div>
-                        <p>قابل استفاده در همه پلتفرم ها</p>
-                    </div>
+                <div
+                    class="flex items-center justify-center py-2 text-sm flex-wrap lg:text-base gap-2 lg:gap-4 divide-x">
+                    <a class="text-teal-700 hover:text-teal-950 transition-colors" href="#regex-list">فهرست رجکس ها</a>
+                    <a class="text-teal-700 hover:text-teal-950 transition-colors" href="#custome-regex">شخصی‌سازی</a>
+                    <a class="text-teal-700 hover:text-teal-950 transition-colors" href="#why-regex">چرا رجکس</a>
                 </div>
-                <br>
+            </div>
 
+            <div class="w-full relative flex items-stretch flex-col top-4 z-20 justify-stretch">
+                <!--<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#e5e7eb" fill-opacity="1" d="M0,160L48,165.3C96,171,192,181,288,192C384,203,480,213,576,208C672,203,768,181,864,181.3C960,181,1056,203,1152,202.7C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>-->
+                <svg class="absolute bottom-1 -z-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#c026d3" fill-opacity="0.1"
+                        d="M0,96L48,112C96,128,192,160,288,165.3C384,171,480,149,576,154.7C672,160,768,192,864,192C960,192,1056,160,1152,149.3C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                    </path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#f3f4f6" fill-opacity="1"
+                        d="M0,96L48,112C96,128,192,160,288,165.3C384,171,480,149,576,154.7C672,160,768,192,864,192C960,192,1056,160,1152,149.3C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                    </path>
+                </svg>
             </div>
         </section>
+    </header>
+
+    <mian class="w-full max-w-[52rem] sm:px-2 px-1 md:px-4 flex justify-center items-center text-right flex-col">
+        ...
+        <h2 class="text-lg font-semibold p-2" id="regex-list">فهرست رجکس ها</h2>
+
+
+        <h3 class="operator-title" id="regex-noProvider">همه اوپراتور</h3>
+        <div class="operator-container">
+            <div class="code-container">
+                <span>کامل: </span>
+                <code class="regex after:scale-0" reg-provider="noProvider" reg-type="full">بارگذاری رجکس ها...</code>
+            </div>
+            <div class="code-container">
+                <span>بهینه: </span>
+                <code class="regex after:scale-0" reg-provider="noProvider"
+                    reg-type="optimal">بارگذاری رجکس ها...</code>
+            </div>
+        </div>
+
+
+        <h3 class="operator-title" id="regex-mtn-irancel">ایرانسل</h3>
+        <div class="operator-container">
+            <div class="code-container">
+                <span>کامل: </span>
+                <code class="regex after:scale-0" reg-provider="mtnIrancel" reg-type="full">بارگذاری رجکس ها...</code>
+            </div>
+            <div class="code-container">
+                <span>بهینه: </span>
+                <code class="regex after:scale-0" reg-provider="mtnIrancel"
+                    reg-type="optimal">بارگذاری رجکس ها...</code>
+            </div>
+        </div>
+
+        <h3 class="operator-title" id="regex-irMci">همراه‌اول</h3>
+        <div class="operator-container">
+            <div class="code-container">
+                <span>کامل: </span>
+                <code class="regex after:scale-0" reg-provider="irMci" reg-type="full">بارگذاری رجکس ها...</code>
+            </div>
+            <div class="code-container">
+                <span>بهینه: </span>
+                <code class="regex after:scale-0" reg-provider="irMci" reg-type="optimal">بارگذاری رجکس ها...</code>
+            </div>
+        </div>
+
+        <h3 class="operator-title" id="regex-rightel">رایتل</h3>
+        <div class="operator-container">
+            <div class="code-container">
+                <span>کامل: </span>
+                <code class="regex after:scale-0" reg-provider="rightel" reg-type="full">بارگذاری رجکس ها...</code>
+            </div>
+
+            <div class="code-container">
+                <span>بهینه: </span>
+                <code class="regex after:scale-0" reg-provider="rightel" reg-type="optimal">بارگذاری رجکس ها...</code>
+            </div>
+        </div>
+
+        <a class="flex items-center justify-center gap-2 mb-6 text-teal-700 hover:text-teal-950 transition-colors"
+            href="https://github.com/AmirMahdyJebreily/iranian-phonenumber-validation/blob/main/README.md"
+            target="_blank">مشاهده بقیه اوپراتور ها <i-arow class="size-4"></i-arow> </a>
+
+        <hr class="my-10" />
+        ...
+        <h2 class="text-lg font-semibold p-2" id="custome-regex">اوپراتور ها را شخصی سازی کنید!</h2>
+        <p class="text-sm font-light p-1 pb-4">با توجه به اینکه ممکن است نخواهید تمام امکانات تشخیص اوپراتور این
+            رجکس ها را در پروژه های خود استفاده کنید، ابزار زیر به شما کمک میکند تا رجکس های خود را شخصی سازی
+            کنید:<a
+                class="inline-flex justify-center items-center gap-2 text-teal-900 px-2 rounded-lg cursor-pointer hover:bg-teal-700 hover:text-white"
+                href="./customization.html">
+                <span>شخصی سازی رجکس ها</span>
+                <i-edit class="size-4"></i-edit>
+            </a>
+        </p>
+
+        <p class="w-full">این بخش بزودی به همین صفحه منتقل می‌شود...</p>
+
+        <hr class="my-10" />
+
+        ...
+        <h2 class="text-lg font-semibold p-2" id="why-regex">چرا رجکس؟</h2>
+        <div class="flex items-center justify-center flex-wrap gap-4 pt-1">
+            <div class="benef-card ">
+                <div class="benef-card-header">
+                    <i-fast class="card-icon"></i-fast>
+                    <p>سریع و بهینه</p>
+                </div>
+                <p>سریع و بهینه در همه نرم‌افزار ها.</p>
+            </div>
+
+            <div class="benef-card">
+                <div class="benef-card-header">
+                    <i-perf class="card-icon"></i-perf>
+                    <p>ساده و قابل فهم</p>
+                </div>
+                <p>ساختاری ساده و قابل درک برای همه.</p>
+            </div>
+
+            <div class="benef-card ">
+                <div class="benef-card-header">
+                    <i-effi class="card-icon"></i-effi>
+                    <p>کاربردی</p>
+                </div>
+                <p>کاربرد های متنوع و عالی در همه‌جا.</p>
+            </div>
+
+            <div class="benef-card">
+                <div class="benef-card-header">
+                    <i-tick class="card-icon"></i-tick>
+                    <p>روش درست</p>
+                </div>
+                <p>روش اصولی بررسی <code>string</code> ها.</p>
+            </div>
+
+            <div class="benef-card">
+                <div class="benef-card-header">
+                    <i-code class="card-icon"></i-code>
+                    <p>کد تمیز تر</p>
+                </div>
+                <p>رجکس ها، تمیز تر از <code>if</code> و <code>else</code> ها</p>
+            </div>
+
+            <div class="benef-card">
+                <div class="benef-card-header">
+                    <i-webs class="card-icon"></i-webs>
+                    <p>سازگار با همه</p>
+                </div>
+                <p>قابل استفاده در همه پلتفرم ها</p>
+            </div>
+        </div>
+        <hr class="my-10" />
+        ...
+
+        <a class="flex items-center justify-center gap-2 mb-6 text-teal-700 hover:text-teal-950 transition-colors"
+            href="https://t.me/codeaghajcs"
+            target="_blank">تلگرام کدآقا <img src="./assets/images/icons8_telegram_app.svg" class="size-6" alt=""></a>
     </mian>
+
+
+    <div class="flex justify-center items-center flex-col gap-2 fixed z-50 bottom-3 left-4">
+
+
+        <a href="https://github.com/AmirMahdyJebreily/iranian-phonenumber-validation"
+            class="flex justify-between items-center py-0.5 px-2 w-full hover:bg-rose-400 bg-gray-50 rounded-xl shadow-md gap-2">
+            <span id="stars" class="pt-1"></span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+            </svg>
+        </a>
+
+        <a href="https://github.com/AmirMahdyJebreily/iranian-phonenumber-validation"
+            class="flex justify-between items-center py-0.5 px-2 w-full hover:bg-teal-400 bg-gray-50 rounded-xl shadow-md gap-2">
+            <span id="forks" class="pt-1"></span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-5 -rotate-90">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z" />
+            </svg>
+
+        </a>
+    </div>
+
+
+    <footer class="bg-white shadow w-full text-gray-700 text-center py-3 px-3 font-bold md:text-lg text-base mt-12">
+        &copy; <a class="text-teal-700 hover:text-teal-950 transition-colors"
+            href="https://github.com/AmirMahdyJebreily/">کدآقا</a> 2024, با ❤️
+    </footer>
+
 
     <script type="module" src="assets/index.js"></script>
 </body>

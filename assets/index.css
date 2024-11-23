@@ -11,23 +11,47 @@
     src: url("./fonts/Arad-VF.woff2");
   }
   body {
-    @apply w-screen bg-gray-300 text-gray-800 font-['arad'];
+    @apply w-screen bg-gray-100 text-gray-800 font-['arad'];
   }
 
-  header,main {
+  header {
     @apply flex justify-center items-center flex-col w-full;
   }
 
-  nav {
-    @apply bg-gray-100 w-full text-gray-700 text-center fixed top-0 py-3 px-3 font-bold text-lg;
+  hr{
+    @apply border-gray-300 w-full
   }
 
-  code{
-    @apply text-teal-800
+  nav {
+    @apply bg-gradient-to-t from-white/80 via-white to-white/40 backdrop-blur shadow w-full text-gray-700 text-center fixed z-50 top-0 py-3 px-3 font-bold md:text-lg text-base flex items-center justify-between;
+  }
+
+  code {
+    @apply text-teal-800 font-mono;
+  }
+  .code-container {
+    @apply bg-gray-300/40 select-none flex justify-center items-center w-full gap-4 pr-4 text-sm my-2 rounded-xl overflow-hidden
+  }
+
+  a{
+    @apply cursor-pointer select-none
+  }
+
+  .operator-title{
+    @apply font-semibold px-2 py-1 w-full
+  }
+
+  .operator-container{
+    @apply py-1 mb-6 w-full flex items-center justify-center flex-col
+  }
+  code.regex {
+    direction: ltr;
+    @apply text-gray-500 cursor-pointer relative w-full bg-gray-300/50 text-nowrap overflow-hidden text-ellipsis border text-sm px-4 py-2 text-left hover:text-teal-600 transition-colors
+    after:absolute after:content-["!کپی_شد"] after:bottom-1.5 after:transition-transform after:font-['arad'] after:text-gray-100 after:bg-gray-950 after:p-1 after:text-center after:text-xs after:rounded-lg after:right-6;
   }
 
   #hero {
-    @apply w-full py-24 flex justify-center items-start bg-cover min-h-screen;
+    @apply w-full pt-12 flex justify-between items-center flex-col bg-cover relative -top-1;
     background-color: rgba(123, 223, 242, 1);
     background-image: radial-gradient(
         at 46% 33%,
@@ -44,7 +68,7 @@
 
 @layer components {
   .benef-card {
-    @apply bg-white/50 py-2 px-4 rounded-xl text-lg min-w-60 flex-1 transition duration-300 hover:ring-2 ring-teal-700/70 hover:animate-wiggle cursor-default;
+    @apply bg-gradient-to-tr from-white/70 to-white/20 py-2 px-4 rounded-xl text-lg min-w-60 flex-1 transition duration-300 border border-gray-200 hover:ring-2 ring-teal-700/70 hover:animate-wiggle cursor-default;
   }
 
   .benef-card-header {
@@ -63,11 +87,11 @@
     @apply font-light text-sm;
   }
 
-  #phonenumber{
-    @apply py-1 px-2 bg-transparent focus:outline-none w-40 text-gray-950
+  #phonenumber {
+    @apply p-1 bg-transparent focus:outline-none text-gray-950 text-center border-b-2 border-gray-200/60 focus:border-teal-700/20 transition-colors duration-700 mb-2;
   }
-  
-  .input-container{
-    @apply bg-gradient-to-tr sm:text-xl text-lg from-white/70 to-white/20 border-2 border-transparent focus-within:border-teal-700 focus-within:text-teal-900 rounded-xl flex items-center justify-center flex-col sm:px-6 px-3 py-2 transition-colors duration-700
+
+  .input-container {
+    @apply bg-gradient-to-tr sm:text-xl text-lg from-white/70 to-white/20 border border-gray-200 focus-within:border-teal-700 focus-within:text-teal-900 rounded-xl flex items-center justify-center flex-col sm:px-4 px-2 py-2 transition-colors duration-700;
   }
 }

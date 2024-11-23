@@ -1,4 +1,4 @@
-import { textMarshal } from 'https://cdn.jsdelivr.net/npm/text-marshal@0.0.2/+esm'
+import { textMarshal } from 'https://cdn.jsdelivr.net/npm/text-marshal@0.0.2/+esm';
 
 (function () {
     const phonenumber = document.getElementById("phonenumber");
@@ -33,15 +33,15 @@ import { textMarshal } from 'https://cdn.jsdelivr.net/npm/text-marshal@0.0.2/+es
         const regexes = [
             {
                 validationRegex: /((0?9)|(\+?989))((32)|(30)|(33)|(35)|(36)|(37)|(38)|(39)|(00)|(01)|(02)|(03)|(04)|(05)|(41))\W?\d{4}\W?\d{3}/g,
-                successText: "شماره ایرانسل"
+                successText: "شمارۀ ایرانسل"
             },
             {
                 validationRegex: /((0?9)|(\+?989))((14)|(13)|(12)|(19)|(18)|(17)|(15)|(16)|(11)|(10)|(90)|(91)|(92)|(93)|(94)|(95)|(96))\W?\d{4}\W?\d{3}/g,
-                successText: "شماره همراه اول"
+                successText: "شمارۀ همراه اول"
             },
             {
                 validationRegex: /((0?9)|(\+?989))((20)|(21)|(22)|(23))\W?\d{4}\W?\d{3}/g,
-                successText: "شماره رایتل"
+                successText: "شمارۀ رایتل"
             }
         ]
 
@@ -71,9 +71,70 @@ import { textMarshal } from 'https://cdn.jsdelivr.net/npm/text-marshal@0.0.2/+es
         }
 
     }
-
 })()
 
 
+function copyInnerHtml(e) {
+    let text = e.target.innerHTML
+    var myTemporaryInputElement = document.createElement("input");
+    myTemporaryInputElement.type = "text";
+    myTemporaryInputElement.value = text;
+
+    document.body.appendChild(myTemporaryInputElement);
+
+    myTemporaryInputElement.select();
+    document.execCommand("Copy");
+
+    document.body.removeChild(myTemporaryInputElement);
+    e.target.classList.toggle("after:scale-0");
+    setTimeout(() => {
+        e.target.classList.toggle("after:scale-0");
+    }, 1000)
+    console.log(text);
+
+}
 
 
+(function () {
+    fetch("../regexes.json")
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error
+                    (`HTTP error! Status: ${res.status}`);
+            }
+            return res.json();
+        })
+        .then((data) => {
+            let codes = document.querySelectorAll(".regex");
+            codes.forEach((code) => {
+                code.addEventListener("click", copyInnerHtml)
+                let provider = code.getAttribute("reg-provider");
+                let type = code.getAttribute("reg-type");
+                code.innerHTML = data[provider][type]
+            })
+        })
+        .catch((error) =>
+            console.error("Unable to fetch data:", error));
+})();
+
+
+(function(){
+    let stars = document.querySelector('#stars')
+    let forks = document.querySelector('#forks')
+    fetch("https://api.github.com/repos/AmirMahdyJebreily/iranian-phonenumber-validation")
+    .then((res) => {
+        if (!res.ok) {
+            throw new Error
+            (`HTTP error! Status: ${res.status}`);
+        }
+        return res.json();
+    })
+    .then(data => {
+        forks.innerHTML = data["forks_count"]
+        stars.innerHTML = data["stargazers_count"]
+    }).catch(() => {
+        stars.innerHTML = "???"
+        forks.innerHTML = "???"
+
+    })
+})()
