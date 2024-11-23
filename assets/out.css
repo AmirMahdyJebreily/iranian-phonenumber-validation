@@ -921,6 +921,18 @@ code.regex:hover {
   top: 1rem;
 }
 
+.-top-10 {
+  top: -2.5rem;
+}
+
+.-top-16 {
+  top: -4rem;
+}
+
+.-top-20 {
+  top: -5rem;
+}
+
 .-z-10 {
   z-index: -10;
 }
@@ -931,6 +943,10 @@ code.regex:hover {
 
 .z-50 {
   z-index: 50;
+}
+
+.z-40 {
+  z-index: 40;
 }
 
 .my-10 {
