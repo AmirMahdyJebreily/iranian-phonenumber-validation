@@ -1,6 +1,5 @@
 import { textMarshal } from 'https://cdn.jsdelivr.net/npm/text-marshal@0.0.2/+esm';
 
-let regex = {}
 (function () {
     fetch("https://raw.githubusercontent.com/AmirMahdyJebreily/iranian-phonenumber-validation/refs/heads/main/regexes.json")
         .then((res) => {
