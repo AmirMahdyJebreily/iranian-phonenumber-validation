@@ -1,5 +1,29 @@
 import { textMarshal } from 'https://cdn.jsdelivr.net/npm/text-marshal@0.0.2/+esm';
 
+let regex = {}
+(function () {
+    fetch("https://raw.githubusercontent.com/AmirMahdyJebreily/iranian-phonenumber-validation/refs/heads/main/regexes.json")
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error
+                    (`HTTP error! Status: ${res.status}`);
+            }
+            return res.json();
+        })
+        .then((data) => {
+            regex = data;
+            let codes = document.querySelectorAll(".regex");
+            codes.forEach((code) => {
+                code.addEventListener("click", copyInnerHtml)
+                let provider = code.getAttribute("reg-provider");
+                let type = code.getAttribute("reg-type");
+                code.innerHTML = data[provider][type]
+            })
+        })
+        .catch((error) =>
+            console.error("Unable to fetch data:", error));
+})();
+
 (function () {
     const phonenumber = document.getElementById("phonenumber");
 
@@ -32,15 +56,15 @@ import { textMarshal } from 'https://cdn.jsdelivr.net/npm/text-marshal@0.0.2/+es
 
         const regexes = [
             {
-                validationRegex: /((0?9)|(\+?989))((32)|(30)|(33)|(35)|(36)|(37)|(38)|(39)|(00)|(01)|(02)|(03)|(04)|(05)|(41))\W?\d{3}\W?\d{4}/g,
+                validationRegex: /((0?9)|(\+?989))((32)|(30)|(33)|(35)|(36)|(37)|(38)|(39)|(00)|(01)|(02)|(03)|(04)|(05)|(41))\W?\d{4}\W?\d{3}/g,
                 successText: "شمارۀ ایرانسل"
             },
             {
-                validationRegex: /((0?9)|(\+?989))((14)|(13)|(12)|(19)|(18)|(17)|(15)|(16)|(11)|(10)|(90)|(91)|(92)|(93)|(94)|(95)|(96))\W?\d{3}\W?\d{4}/g,
+                validationRegex: /((0?9)|(\+?989))((14)|(13)|(12)|(19)|(18)|(17)|(15)|(16)|(11)|(10)|(90)|(91)|(92)|(93)|(94)|(95)|(96))\W?\d{4}\W?\d{3}/g,
                 successText: "شمارۀ همراه اول"
             },
             {
-                validationRegex: /((0?9)|(\+?989))((20)|(21)|(22)|(23))\W?\d{3}\W?\d{4}/g,
+                validationRegex: /((0?9)|(\+?989))((20)|(21)|(22)|(23))\W?\d{4}\W?\d{3}/g,
                 successText: "شمارۀ رایتل"
             }
         ]
@@ -93,29 +117,6 @@ function copyInnerHtml(e) {
     console.log(text);
 
 }
-
-
-(function () {
-    fetch("https://raw.githubusercontent.com/AmirMahdyJebreily/iranian-phonenumber-validation/refs/heads/main/regexes.json")
-        .then((res) => {
-            if (!res.ok) {
-                throw new Error
-                    (`HTTP error! Status: ${res.status}`);
-            }
-            return res.json();
-        })
-        .then((data) => {
-            let codes = document.querySelectorAll(".regex");
-            codes.forEach((code) => {
-                code.addEventListener("click", copyInnerHtml)
-                let provider = code.getAttribute("reg-provider");
-                let type = code.getAttribute("reg-type");
-                code.innerHTML = data[provider][type]
-            })
-        })
-        .catch((error) =>
-            console.error("Unable to fetch data:", error));
-})();
 
 
 (function(){

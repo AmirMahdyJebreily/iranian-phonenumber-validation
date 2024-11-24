@@ -1372,6 +1372,10 @@ code.regex:hover {
 }
 
 @media (min-width: 1024px) {
+  .lg\:-top-20 {
+    top: -5rem;
+  }
+
   .lg\:w-\[50rem\] {
     width: 50rem;
   }
