@@ -913,28 +913,12 @@ code.regex:hover {
   left: 1rem;
 }
 
-.top-12 {
-  top: 3rem;
+.top-14 {
+  top: 3.5rem;
 }
 
 .top-4 {
   top: 1rem;
-}
-
-.-top-10 {
-  top: -2.5rem;
-}
-
-.-top-16 {
-  top: -4rem;
-}
-
-.-top-20 {
-  top: -5rem;
-}
-
-.top-14 {
-  top: 3.5rem;
 }
 
 .-z-10 {
@@ -945,12 +929,12 @@ code.regex:hover {
   z-index: 20;
 }
 
-.z-50 {
-  z-index: 50;
-}
-
 .z-40 {
   z-index: 40;
+}
+
+.z-50 {
+  z-index: 50;
 }
 
 .my-10 {
@@ -964,10 +948,6 @@ code.regex:hover {
 
 .mt-12 {
   margin-top: 3rem;
-}
-
-.mt-1 {
-  margin-top: 0.25rem;
 }
 
 .mt-2 {
@@ -1002,9 +982,9 @@ code.regex:hover {
   height: 1.5rem;
 }
 
-.size-7 {
-  width: 1.75rem;
-  height: 1.75rem;
+.size-24 {
+  width: 6rem;
+  height: 6rem;
 }
 
 .w-11\/12 {
@@ -1090,10 +1070,6 @@ code.regex:hover {
   border-radius: 0.75rem;
 }
 
-.rounded-full {
-  border-radius: 9999px;
-}
-
 .bg-gray-100\/60 {
   background-color: rgb(243 244 246 / 0.6);
 }
@@ -1116,11 +1092,6 @@ code.regex:hover {
   padding: 0.5rem;
 }
 
-.px-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-}
-
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1129,6 +1100,11 @@ code.regex:hover {
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .py-0\.5 {
@@ -1204,12 +1180,12 @@ code.regex:hover {
   font-weight: 300;
 }
 
-.font-semibold {
-  font-weight: 600;
-}
-
 .font-medium {
   font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .tracking-\[0\.2rem\] {
@@ -1256,16 +1232,6 @@ code.regex:hover {
 .text-teal-900 {
   --tw-text-opacity: 1;
   color: rgb(19 78 74 / var(--tw-text-opacity, 1));
-}
-
-.text-sky-500 {
-  --tw-text-opacity: 1;
-  color: rgb(14 165 233 / var(--tw-text-opacity, 1));
-}
-
-.text-teal-800 {
-  --tw-text-opacity: 1;
-  color: rgb(17 94 89 / var(--tw-text-opacity, 1));
 }
 
 .shadow {
@@ -1324,11 +1290,6 @@ code.regex:hover {
   background-color: rgb(15 118 110 / var(--tw-bg-opacity, 1));
 }
 
-.hover\:bg-gray-200:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
-}
-
 .hover\:text-teal-950:hover {
   --tw-text-opacity: 1;
   color: rgb(4 47 46 / var(--tw-text-opacity, 1));
@@ -1344,11 +1305,6 @@ code.regex:hover {
     width: 83.333333%;
   }
 
-  .sm\:px-2 {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-
   .sm\:px-5 {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -1360,11 +1316,6 @@ code.regex:hover {
 }
 
 @media (min-width: 768px) {
-  .md\:px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
   .md\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
