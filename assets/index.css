@@ -50,6 +50,10 @@
     after:absolute after:content-["!کپی_شد"] after:bottom-1.5 after:transition-transform after:font-['arad'] after:text-gray-100 after:bg-gray-950 after:p-1 after:text-center after:text-xs after:rounded-lg after:right-6;
   }
 
+  article{
+    @apply flex justify-center items-center w-full flex-col;
+  }
+
   #hero {
     @apply w-full pt-12 flex justify-between items-center flex-col bg-cover relative -top-1;
     background-color: rgba(123, 223, 242, 1);

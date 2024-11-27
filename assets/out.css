@@ -729,6 +729,14 @@ code.regex:hover {
   color: rgb(13 148 136 / var(--tw-text-opacity, 1));
 }
 
+article {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 #hero {
   position: relative;
   top: -0.25rem;
@@ -962,9 +970,9 @@ code.regex:hover {
   display: inline-flex;
 }
 
-.size-28 {
-  width: 7rem;
-  height: 7rem;
+.size-24 {
+  width: 6rem;
+  height: 6rem;
 }
 
 .size-4 {
@@ -980,11 +988,6 @@ code.regex:hover {
 .size-6 {
   width: 1.5rem;
   height: 1.5rem;
-}
-
-.size-24 {
-  width: 6rem;
-  height: 6rem;
 }
 
 .w-11\/12 {
