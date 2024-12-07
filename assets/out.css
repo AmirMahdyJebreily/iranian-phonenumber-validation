@@ -838,6 +838,7 @@ article {
 
 #phonenumber {
   margin-bottom: 0.5rem;
+  width: 100%;
   border-bottom-width: 2px;
   border-color: rgb(229 231 235 / 0.6);
   background-color: transparent;
@@ -854,6 +855,12 @@ article {
   border-color: rgb(15 118 110 / 0.2);
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+@media (min-width: 640px) {
+  #phonenumber {
+    width: auto;
+  }
 }
 
 .input-container {
@@ -874,8 +881,6 @@ article {
   padding-right: 0.5rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 700ms;
@@ -892,6 +897,13 @@ article {
   .input-container {
     padding-left: 1rem;
     padding-right: 1rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .input-container {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
@@ -921,12 +933,12 @@ article {
   left: 1rem;
 }
 
-.top-14 {
-  top: 3.5rem;
-}
-
 .top-4 {
   top: 1rem;
+}
+
+.top-7 {
+  top: 1.75rem;
 }
 
 .-z-10 {
@@ -998,24 +1010,12 @@ article {
   width: 91.666667%;
 }
 
-.w-28 {
-  width: 7rem;
-}
-
 .w-full {
   width: 100%;
 }
 
 .w-screen {
   width: 100vw;
-}
-
-.w-36 {
-  width: 9rem;
-}
-
-.w-96 {
-  width: 24rem;
 }
 
 .max-w-\[52rem\] {
@@ -1320,6 +1320,10 @@ article {
 }
 
 @media (min-width: 640px) {
+  .sm\:top-14 {
+    top: 3.5rem;
+  }
+
   .sm\:w-10\/12 {
     width: 83.333333%;
   }
@@ -1333,16 +1337,17 @@ article {
     padding-right: 1.25rem;
   }
 
+  .sm\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
   .sm\:tracking-\[0\.36rem\] {
     letter-spacing: 0.36rem;
   }
 }
 
 @media (min-width: 768px) {
-  .md\:w-64 {
-    width: 16rem;
-  }
-
   .md\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -1354,16 +1359,12 @@ article {
     top: -5rem;
   }
 
-  .lg\:w-\[50rem\] {
-    width: 50rem;
-  }
-
-  .lg\:w-96 {
-    width: 24rem;
-  }
-
   .lg\:w-72 {
     width: 18rem;
+  }
+
+  .lg\:w-\[50rem\] {
+    width: 50rem;
   }
 
   .lg\:gap-4 {

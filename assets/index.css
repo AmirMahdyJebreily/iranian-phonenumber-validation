@@ -92,10 +92,10 @@
   }
 
   #phonenumber {
-    @apply p-1 bg-transparent focus:outline-none text-gray-950 text-center border-b-2 border-gray-200/60 focus:border-teal-700/20 transition-colors duration-700 mb-2;
+    @apply p-1 bg-transparent focus:outline-none text-gray-950 text-center border-b-2 border-gray-200/60 focus:border-teal-700/20 transition-colors duration-700 mb-2 sm:w-auto w-full;
   }
 
   .input-container {
-    @apply bg-gradient-to-tr sm:text-xl text-lg from-white/70 to-white/20 border border-gray-200 focus-within:border-teal-700 focus-within:text-teal-900 rounded-xl flex items-center justify-center flex-col sm:px-4 px-2 py-2 transition-colors duration-700;
+    @apply bg-gradient-to-tr md:text-xl sm:text-lg from-white/70 to-white/20 border border-gray-200 focus-within:border-teal-700 focus-within:text-teal-900 rounded-xl flex items-center justify-center flex-col sm:px-4 px-2 py-2 transition-colors duration-700;
   }
 }
